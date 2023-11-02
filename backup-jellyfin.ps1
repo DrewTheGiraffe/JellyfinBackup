@@ -1,4 +1,6 @@
-﻿$date = Get-Date -Format "MM-dd-yyyy"
+# Simple Jellyfin server backup script for windows.. | By Drew Burgess 2023.
+
+$date = Get-Date -Format "MM-dd-yyyy"
 $backupname = "JellyFinServer_Backup-${date}"
 
 New-Item -Path "C:\temp" -Name $backupname -ItemType Directory -Force  
