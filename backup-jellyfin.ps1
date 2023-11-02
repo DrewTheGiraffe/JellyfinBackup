@@ -18,3 +18,6 @@ Write-Host "${backupname}.zip" -NoNewline -ForegroundColor Green
 Write-Host "] to C:\temp"
 
 Compress-Archive -Path "C:\temp\$backupname" -DestinationPath "C:\temp\$backupname.zip" -Verbose -Force
+
+# Remove copied data after compression
+Remove-Item -Path "C:\temp\$backupname" -Recurse -Force
