@@ -31,3 +31,5 @@ Start-Sleep -Seconds 2
 Compress-Archive -Path "C:\temp\$backupname" -DestinationPath "C:\temp\$backupname.zip" -Verbose -Force
 
 Remove-Item -Path "C:\temp\JellyFinServer_Backup-${date}" -Recurse -Force
+
+start C:\temp
