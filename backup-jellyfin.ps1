@@ -19,7 +19,7 @@ If (-not(Get-service -Name "*Jellyfin*"))) {
     $verified = (-not(Get-Process | Where {$_.ProcessName -like "*jellyfin*"} | select $_))
 }
 else {
-    $verified = If (-not(Get-Service -Name "*Jellyfin*").Status -eq "Stopped") { 
+     If (-not(Get-Service -Name "*Jellyfin*").Status -eq "Stopped") { 
         Write-Host "Waiting for Jellyfin Service to stop" -NoNewline
         Stop-Service -Name "*Jellyfin*" -Force
         Do {
